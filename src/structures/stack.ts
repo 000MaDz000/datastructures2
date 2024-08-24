@@ -1,5 +1,5 @@
 import { LinkedList } from "./linked-list";
-import { Stack as StackType } from "datastructures";
+import { Stack as StackType } from "datastructures2";
 
 export class Stack<T> implements StackType<T> {
     private linkedList: LinkedList<T>;

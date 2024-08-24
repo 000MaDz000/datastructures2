@@ -1,4 +1,4 @@
-import { BinaryTreeNode, BinaryTree as BinaryTreeType } from "datastructures";
+import { BinaryTreeNode, BinaryTree as BinaryTreeType } from "datastructures2";
 
 export class BinaryTree<T> implements BinaryTreeType<T> {
     public root: BinaryTreeNode<T> | null;

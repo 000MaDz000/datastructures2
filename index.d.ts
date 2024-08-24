@@ -1,4 +1,4 @@
-declare module "datastructures" {
+declare module "datastructures2" {
     /** Linked List */
     type LinkedNode<T> = {
         value: T;

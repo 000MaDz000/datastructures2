@@ -1,4 +1,4 @@
-import { LinkedList as LinkedListType, LinkedNode } from "datastructures";
+import { LinkedList as LinkedListType, LinkedNode } from "datastructures2";
 
 export class LinkedList<T> implements LinkedListType<T> {
     public head: LinkedNode<T>;

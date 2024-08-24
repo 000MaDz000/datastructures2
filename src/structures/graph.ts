@@ -1,4 +1,4 @@
-import { Graph as GraphType } from "datastructures";
+import { Graph as GraphType } from "datastructures2";
 
 export class Graph<T> implements GraphType<T> {
     private adjacencyList: Map<T, Set<T>>;

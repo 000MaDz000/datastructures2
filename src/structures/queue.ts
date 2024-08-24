@@ -1,5 +1,5 @@
 import { LinkedList } from "./linked-list";
-import { Queue as QueueType } from "datastructures";
+import { Queue as QueueType } from "datastructures2";
 
 export class Queue<T> implements QueueType<T> {
     private linkedList: LinkedList<T>;
