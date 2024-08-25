@@ -120,4 +120,12 @@ export class LinkedList<T> implements LinkedListType<T> {
         this.length--;
         return value;
     }
+
+    *[Symbol.iterator](): Iterator<T> {
+        let currentNode = this.head;
+        while (currentNode) {
+            yield currentNode.value;
+            currentNode = currentNode.next!;
+        }
+    }
 }
