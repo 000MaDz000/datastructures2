@@ -9,6 +9,11 @@ export class Queue<T> implements QueueType<T> {
     }
 
     enqueue(value: T): void {
+        if (this.isEmpty()) {
+            this.linkedList = new LinkedList(value);
+            return;
+        }
+
         this.linkedList.append(value);
     }
 
