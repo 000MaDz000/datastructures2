@@ -1,6 +1,8 @@
 
-export { BinaryTree } from './structures/binary-tree';
-export { LinkedList } from './structures/linked-list';
-export { Stack } from './structures/stack';
-export { Queue } from "./structures/queue";
-export { Graph } from "./structures/graph";
+import { BinaryTree } from './structures/binary-tree';
+import { LinkedList } from './structures/linked-list';
+import { Stack } from './structures/stack';
+import { Queue } from "./structures/queue";
+import { Graph } from "./structures/graph";
+
+export { BinaryTree, LinkedList, Stack, Queue, Graph }

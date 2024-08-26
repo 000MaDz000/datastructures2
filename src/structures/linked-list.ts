@@ -5,15 +5,21 @@ export class LinkedList<T> implements LinkedListType<T> {
     public tail: LinkedNode<T>;
     public length: number;
 
-    constructor(headValue: T) {
+    constructor(headValue: T | null | undefined) {
         const headNode: LinkedNode<T> = {
-            value: headValue,
+            value: headValue as any,
             prev: null,
             next: null,
         };
         this.head = headNode;
         this.tail = headNode;
-        this.length = 1;
+
+        if (headValue) {
+            this.length = 1;
+        }
+        else {
+            this.length = 0;
+        }
     }
 
     append(value: T): T {
@@ -23,6 +29,8 @@ export class LinkedList<T> implements LinkedListType<T> {
                 prev: null,
                 next: null,
             }
+
+            this.tail = this.head;
             return value;
         }
 
@@ -44,6 +52,8 @@ export class LinkedList<T> implements LinkedListType<T> {
                 prev: null,
                 next: null,
             }
+
+            this.tail = this.head;
             return value;
         }
         const newNode: LinkedNode<T> = {

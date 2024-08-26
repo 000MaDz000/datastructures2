@@ -3,24 +3,30 @@ import { Queue as QueueType } from "datastructures2";
 
 export class Queue<T> implements QueueType<T> {
     private linkedList: LinkedList<T>;
+    length: number;
 
     constructor() {
         this.linkedList = new LinkedList<T>(null as any); // Initialize with an empty LinkedList
+        this.length = 0;
     }
 
     enqueue(value: T): void {
         if (this.isEmpty()) {
             this.linkedList = new LinkedList(value);
-            return;
+        }
+        else {
+            this.linkedList.append(value);
         }
 
-        this.linkedList.append(value);
+        this.length++;
     }
 
     dequeue(): T | undefined {
         if (this.isEmpty()) {
             return undefined;
         }
+
+        this.length--;
         return this.linkedList.removeFirst();
     }
 
@@ -32,6 +38,6 @@ export class Queue<T> implements QueueType<T> {
     }
 
     isEmpty(): boolean {
-        return this.linkedList.length === 0;
+        return this.length === 0;
     }
 }
