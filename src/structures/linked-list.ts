@@ -17,6 +17,15 @@ export class LinkedList<T> implements LinkedListType<T> {
     }
 
     append(value: T): T {
+        if (!this.length) {
+            this.head = {
+                value,
+                prev: null,
+                next: null,
+            }
+            return value;
+        }
+
         const newNode: LinkedNode<T> = {
             value,
             prev: this.tail,
@@ -29,6 +38,14 @@ export class LinkedList<T> implements LinkedListType<T> {
     }
 
     prepend(value: T): T {
+        if (!this.length) {
+            this.head = {
+                value,
+                prev: null,
+                next: null,
+            }
+            return value;
+        }
         const newNode: LinkedNode<T> = {
             value,
             prev: null,
