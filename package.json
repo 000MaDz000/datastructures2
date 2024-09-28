@@ -1,6 +1,6 @@
 {
   "name": "datastructures2",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "author": "MaDz",
   "description": "Binary Tree, Linked List, Stack, and Queue data structures with Typescript",
   "keywords": [
@@ -16,7 +16,7 @@
   ],
   "main": "dist/index.js",
   "scripts": {
-    "build": "tss"
+    "build": "tsc"
   },
   "license": "ISC",
   "devDependencies": {

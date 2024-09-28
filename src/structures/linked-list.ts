@@ -31,6 +31,7 @@ export class LinkedList<T> implements LinkedListType<T> {
             }
 
             this.tail = this.head;
+            this.length++;
             return value;
         }
 
@@ -53,6 +54,7 @@ export class LinkedList<T> implements LinkedListType<T> {
                 next: null,
             }
 
+            this.length++;
             this.tail = this.head;
             return value;
         }
