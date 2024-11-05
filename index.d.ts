@@ -19,6 +19,7 @@ declare module "datastructures2" {
         remove(index: number): T | undefined;
         removeLast(): T;
         removeFirst(): T;
+        *[Symbol.iterator](): Iterator<T>;
     }
 
     /** Binary Tree */
